@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Post Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="max-w-4xl mx-auto py-10 px-6">
+    <!-- Blog Image -->
+    <div class="rounded-xl overflow-hidden shadow-lg">
+      <img src="https://source.unsplash.com/featured/?technology" alt="Blog Image" class="w-full h-64 object-cover">
+    </div>
+
+    <!-- Blog Title and Metadata -->
+    <div class="mt-6">
+      <h1 class="text-4xl font-bold text-indigo-700 mb-2">{{postdetails.title}}</h1>
+      <p class="text-sm text-gray-500">By <span class="font-semibold">{{postdetails.author}}</span> • {{postdetails.date}}</p>
+    </div>
+
+    <!-- Excerpt -->
+    <div class="mt-4">
+      <p class="text-lg text-gray-700 italic">{{postdetails.excerpt}}</p>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="mt-6 space-y-4 text-gray-800 leading-relaxed text-justify">
+    {{postdetails.content}}
+    </div>
+
+    <!-- Back Button -->
+    <div class="mt-10">
+      <a href="index.html" class="inline-block px-6 py-2 text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-md transition">
+        ← Back to Blog List
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

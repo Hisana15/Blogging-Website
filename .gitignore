@@ -1,0 +1,16 @@
+# Node modules (for both frontend and backend)
+**/node_modules/
+
+# Build outputs
+frontend/dist/
+backend/build/
+
+# Environment files
+**/.env
+
+# Logs
+*/.log
+
+# OS or editor-specific
+.DS_Store
+*.swp

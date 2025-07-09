@@ -1,0 +1,33 @@
+<!-- home.component.html -->
+<div class="min-h-screen bg-gray-50">
+  
+<app-navbar></app-navbar>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-indigo-100 to-purple-200 py-20">
+    <div class="max-w-6xl mx-auto text-center px-4">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4">Discover Stories, Ideas & Perspectives</h1>
+      <p class="text-lg text-gray-600 mb-6">Join our community of bloggers and readers from around the world.</p>
+      <a routerLink="/blogs" class="inline-block bg-indigo-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-indigo-700 transition">
+        Explore Blogs
+      </a>
+    </div>
+  </section>
+
+  <!-- Blog Preview Cards -->
+  <section class="py-12 px-4" id="posts">
+    <div class="max-w-7xl mx-auto" >
+      <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">Latest Posts</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Example card, repeat using *ngFor -->
+         @for (post of blogPost;track post.title) {
+        <div  class="bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition cursor-pointer" (click)="navigateToDetails(post.id)" >
+          <h3 class="text-xl font-semibold text-indigo-700 mb-2">{{post.title}}</h3>
+          <p class="text-gray-600 text-sm mb-4">{{post.content}}</p>
+          <div class="text-sm text-gray-500">By {{post.author}} · {{post.date}}</div>
+        </div>
+    }
+        <!-- Add more cards -->
+      </div>
+    </div>
+  </section>
+</div>
